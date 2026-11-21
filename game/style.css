@@ -1,0 +1,49 @@
+/* NIGHTSHIFT: page chrome around the canvas. The game itself is
+   drawn on the canvas; this only centres it on a dark page. */
+html, body {
+  margin: 0;
+  height: 100%;
+  background: #0b0d12;
+  color: #e8e4d8;
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+
+.stage {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 12px;
+  box-sizing: border-box;
+}
+
+#game {
+  display: block;
+  width: min(960px, 96vw);
+  height: auto;
+  border: 2px solid #2a2f3a;
+  border-radius: 6px;
+  background: #10131a;
+  box-shadow: 0 12px 48px rgba(0, 0, 0, 0.6);
+  touch-action: none;
+  cursor: crosshair;
+}
+
+.hint {
+  margin: 0;
+  font-size: 13px;
+  color: #9aa3b2;
+  text-align: center;
+}
+
+/* Read aloud, never shown: the status line screen readers announce. */
+#status {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
